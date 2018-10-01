@@ -52,4 +52,13 @@ efft de bord: un tableau d'entier trié
 
 void tri_selection(int[], int);
 
+/* tri_selection
+input: un tableau d'entier et sa taille;
+efft de bord: un tableau d'entier trié
+il s'agit d'une version différente du tri par selection, voir cahier pour pseudo code
+*/
+
+void tri_selectionv2(int[], int);
+
+
 #endif

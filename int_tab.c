@@ -50,3 +50,8 @@ void tri_selection(int tab[], int taille)
     taille--;
   }
 }
+
+void tri_selectionv2(int tab[], int taille)
+{
+	for(int i=0;i<taille; taille)
+}
