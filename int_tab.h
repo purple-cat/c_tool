@@ -64,6 +64,13 @@ il s'agit d'une version différente du tri par selection, voir cahier pour pseud
 
 void tri_selectionv2(int[], int);
 
+/* tri_selection_rec
+input: un tableau d'entier et sa taille;
+efft de bord: un tableau d'entier trié
+il s'agit d'une version différente du tri par selection qui utilise la recursivité
+*/
+
+void tri_selection_rec(int[], int);
 
 
 #endif

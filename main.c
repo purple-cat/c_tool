@@ -15,12 +15,10 @@ int main(int argc, char const *argv[]) {
   int_print_me(tab,5);
 */
 
-  printf("Utilisation du tri par selection V2\n");
+  printf("Utilisation du tri par selection REC\n");
   tri_selection(tab,5);
   int_print_me(tab,5);
 
-  printf("Test fonction récursive\n");
-    printf("Résultat : %lu\n",factorielle(3));
 
 
 

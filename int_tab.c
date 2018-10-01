@@ -56,6 +56,9 @@ void echange(int tab[],int i, int j)
   int tmp=tab[i]; tab[i]=tab[j]; tab[j]=tmp;
 }
 
+
+//########## SELECT_SORT ##########
+
 void tri_selection(int tab[], int taille)
 {
     while(taille>1) {
@@ -77,3 +80,12 @@ void tri_selectionv2(int tab[], int taille)
     }
   }
 }
+
+void tri_selection_rec(int tab[], int taille)
+{
+  //Condition d'arret 
+  if(taille<=1){return;}
+  echange(tab,taille-1,max(tab,taille));
+  tri_selection_rec(tab,taille-1);
+}
+
