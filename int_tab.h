@@ -1,6 +1,10 @@
 #ifndef __TAB_H__ // Directive du pré-processeur
 #define __TAB_H__ // permet d'éviter l'inclusion mutliple
 
+// ##### USEFUL FUNCTIONS #####
+
+unsigned long factorielle(int n);
+
 // ##### SOME ARRAY FUNCTIONS #####
 /*
 Dans ce fichier on écrit les prototypes des fonctions
@@ -59,6 +63,7 @@ il s'agit d'une version différente du tri par selection, voir cahier pour pseud
 */
 
 void tri_selectionv2(int[], int);
+
 
 
 #endif
