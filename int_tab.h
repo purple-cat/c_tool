@@ -72,5 +72,10 @@ il s'agit d'une version différente du tri par selection qui utilise la recursiv
 
 void tri_selection_rec(int[], int);
 
+/*tri_insertion 
+input: un tableau d'entier et sa taille TAILLE:
+*/
+void tri_insertion(int tab[], int taille);
+
 
 #endif

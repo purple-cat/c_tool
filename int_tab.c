@@ -12,8 +12,6 @@ unsigned long factorielle(int n)
   if (n==0||n==1){return 1;}
 
   return n*factorielle(n-1);
-
-
 }
 
 //########## ARRAY WORKS ##########
@@ -24,7 +22,6 @@ void int_print_me(int tab[],int taille)
     printf("tab[%d] vaut %d\n",i,tab[i]);
   }
 }
-
 int int_rng(int sup, int inf)
 {
   int rng = (rand()%(sup-inf+1))+inf;
@@ -80,7 +77,6 @@ void tri_selectionv2(int tab[], int taille)
     }
   }
 }
-
 void tri_selection_rec(int tab[], int taille)
 {
   //Condition d'arret 
@@ -88,4 +84,21 @@ void tri_selection_rec(int tab[], int taille)
   echange(tab,taille-1,max(tab,taille));
   tri_selection_rec(tab,taille-1);
 }
+
+void tri_insertion(int tab[], int taille)
+{
+  for (int i = 2; i < taille; ++i)
+  {
+    int x=tab[i];
+    int j=i-1;
+    while(j>0 && tab[j]>x)
+    {
+      tab[j+1]=tab[j];
+      j--;
+    }
+    tab[j+1]=x;
+  }
+}
+
+
 
