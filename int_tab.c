@@ -40,7 +40,7 @@ void int_rng_values(int tab[],int taille,int sup, int inf)
 int max(int tab[] , int taille)
 {
   int indice_max=0;
-  for (int i = 0; i < taille; i++) {
+  for (int i = 1; i < taille; i++) {
     if (tab[i]>tab[indice_max]) {
       indice_max=i;
     }
@@ -72,7 +72,7 @@ void tri_selectionv2(int tab[], int taille)
     int jmin=i; 
     for (int j = i+1; j < taille; ++j)
     {
-      if(tab[j]<tab[jmin]) {jmin=i;}
+      if(tab[j]<tab[jmin]) {jmin=j;}
       echange(tab,i,jmin);   
     }
   }
@@ -87,16 +87,31 @@ void tri_selection_rec(int tab[], int taille)
 
 void tri_insertion(int tab[], int taille)
 {
-  for (int i = 2; i < taille; ++i)
+  for (int i = 1; i < taille; ++i)
   {
     int x=tab[i];
     int j=i-1;
-    while(j>0 && tab[j]>x)
+    while(j>=0 && tab[j]>x)
     {
       tab[j+1]=tab[j];
       j--;
     }
     tab[j+1]=x;
+  }
+}
+
+void tri_insertionv2(int tab[], int taille)
+{
+  for (int i = 1; i < taille; ++i)
+  {
+    int cle = tab[i];
+    int j = i-1;
+    while(j>=0 && tab[j]>cle)
+    {
+      echange(tab,j,j+1);
+      j--;
+    }
+    //tab[j+1]=cle;
   }
 }
 

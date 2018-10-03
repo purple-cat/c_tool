@@ -75,7 +75,9 @@ void tri_selection_rec(int[], int);
 /*tri_insertion 
 input: un tableau d'entier et sa taille TAILLE:
 */
-void tri_insertion(int tab[], int taille);
+void tri_insertion(int[],int);
+
+void tri_insertionv2(int[],int);
 
 
 #endif

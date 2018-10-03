@@ -6,18 +6,18 @@
 
 int main(int argc, char const *argv[]) {
   srand(time(NULL));
-  int tab[5];
-  int_rng_values(tab,5,50,0);
-  int_print_me(tab,5);
+  int tab[10];
+  int_rng_values(tab,10,50,0);
+  int_print_me(tab,10);
 /*
   printf("Utilisation du tri par selection\n");
   tri_selection(tab,5);
   int_print_me(tab,5);
 */
 
-  printf("Utilisation du tri par selection REC\n");
-  tri_selection(tab,5);
-  int_print_me(tab,5);
+  printf("Utilisation du tri insertion V2\n");
+  tri_insertionv2(tab,10);
+  int_print_me(tab,10);
 
 
 
