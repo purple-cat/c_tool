@@ -1,0 +1,15 @@
+#include "struct_pile.h"
+
+pile* innitialisation()
+{	
+	if (Pile* nouveau = malloc(sizeof(Pile)!=NULL))
+	{
+		return nouveau;
+	}
+}
+
+int pile_vide(*Pile p)
+{
+	if (p==NULL){return 1;} else{return 0;}
+}
+
