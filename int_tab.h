@@ -80,6 +80,4 @@ void tri_insertion(int[],int);
 void tri_insertionv2(int[],int);
 
 
-
-
 #endif

@@ -6,6 +6,7 @@
 
 
 int main(int argc, char const *argv[]) {
+  /*
   srand(time(NULL));
   int tab[10];
   int_rng_values(tab,10,50,0);
@@ -20,9 +21,8 @@ int main(int argc, char const *argv[]) {
   tri_insertionv2(tab,10);
   int_print_me(tab,10);
 
-
-
-
-
   return 0;
+  */
+
+  
 }

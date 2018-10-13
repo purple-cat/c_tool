@@ -15,20 +15,27 @@ typedef struct pile
 	struct pile *precedent; 
 }Pile;
 
-/*innitialisation_pile();
-input : rien 
-output : rien
-*/
-Pile* innitialisation_pile();
-
-
-
-/*pile_vide
-input : un element de type pile
-output : retourne vrai si la pile p est vide
+/* pile_vide
+input: une pile p
+output: 
+retourne 0 si l'allocation dynamique à echoué: 
+retourne 1 si l'allocation réussi
 */
 int pile_vide(Pile*);
 
+/* pile_push
+input: un element e et une pile p 
+l'élément est non nulle si l'est l'affectation est correcte 
+l'élément est nulle si l'affectation n'est pas correcte
+*/
+Pile* pile_push(Pile*,int);
 
+
+/* maillon_vide
+input: une pile e
+retourne 0 si la création d'un maillon échoue 
+retourne l'adresse du maillon si la création du maillon a reussi 
+*/
+Pile* nouveau_maillon();
 
 #endif
