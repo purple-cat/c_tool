@@ -9,33 +9,56 @@ et pointe toujours vers un autre élement qui lui précéde
 
 
 // Explication: la structure pile 
-typedef struct pile
-{
+typedef struct noeud{
 	int donnee; // 
-	struct pile *precedent; 
-}Pile;
+	struct noeud *prochain; 
+}*pile;
 
 /* pile_vide
 input: une pile p
-output: 
+output: une pille vide
 retourne 0 si l'allocation dynamique à echoué: 
 retourne 1 si l'allocation réussi
 */
-int pile_vide(Pile*);
+pile pile_vide();
 
-/* pile_push
-input: un element e et une pile p 
-l'élément est non nulle si l'est l'affectation est correcte 
-l'élément est nulle si l'affectation n'est pas correcte
+/* est_pile_vide
+input: une pile p
+output: 1 ou 0
+retourne si la pile est vide ou pas 
 */
-Pile* pile_push(Pile*,int);
+int est_pile_vide(pile);
 
-
-/* maillon_vide
-input: une pile e
-retourne 0 si la création d'un maillon échoue 
-retourne l'adresse du maillon si la création du maillon a reussi 
+/* push()
+input: un element est une pile
+output:rien
 */
-Pile* nouveau_maillon();
+
+void push(pile*,int);
+
+/* pop()
+input: 
+output:retourne l'element du maillon qui a été depop
+*/
+int pop(pile*);
+
+/* destroy()
+input: une pile
+output: rien 
+effet de bord: destruction de l'ensemble des elements d'une pile
+*/
+
+void destroy(pile);
+void rec_destroy(pile);
+
+int tete_pile(pile*);
+
+//void affiche_pile(pile*);
 
 #endif
+
+
+
+
+
+

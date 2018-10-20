@@ -2,37 +2,64 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void innitialisation(Pile* p)
-{
-	Pile* nouveau = malloc(sizeof(Pile));
-	if (nouveau!=NULL)
+pile pile_vide(){return NULL;}
+
+int est_pile_vide(pile p){
+	return p==NULL;
+}
+
+void push(pile *p,int donnee){
+	pile new = malloc (sizeof(pile));
+	if (new==NULL){exit(1);}
+	new->donnee=donnee;
+	new->prochain=*p;
+	*p=new;
+}
+
+int pop(pile *p){
+	int result = (*p)->donnee;
+	pile next=(*p)->prochain;
+	free(*p);
+	*p=next;
+	return result;
+}
+
+void destroy (pile p){
+	while(p){
+		pile prochain = p->prochain;
+		free(p);
+		p=prochain;
+
+	} // different de nulle 
+}
+
+void rec_destroy (pile p){
+	if (p)
 	{
-		p=nouveau;
+		pile inter=p->prochain;
+		free(p);
+		rec_destroy(inter);
 	}
-}
-int pile_vide(Pile *p)
-{
-
-	if (p==NULL){return 0;} else{return 1;}
+	printf("Fin destruction\n");
 }
 
-Pile* nouveau_maillon()
-{
-	Pile* nouveau = malloc(sizeof(Pile));
-	if (nouveau==NULL)
-	{
-		return NULL;
-	}
-	else
-		{nouveau->precedent=NULL;return nouveau;}
+int tete_pile(pile *p){
+	return (*p)->donnee;
 }
 
-Pile* pile_push(Pile* p, int element)
-{
-	Pile *nouveau = nouveau_maillon();
-	if (nouveau==NULL) {exit(1);}
-	nouveau->donnee=element;
-	nouveau->precedent=p;
-	p=nouveau;
-	return p;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
