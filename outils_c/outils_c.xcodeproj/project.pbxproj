@@ -6,10 +6,23 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXFileReference section */
+		4819CD312184A3DC00520DF6 /* struct_pile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = struct_pile.h; path = ../struct_pile.h; sourceTree = "<group>"; };
+		4819CD322184A3DC00520DF6 /* int_tab.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = int_tab.c; path = ../int_tab.c; sourceTree = "<group>"; };
+		4819CD332184A3DC00520DF6 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = main.c; path = ../main.c; sourceTree = "<group>"; };
+		4819CD342184A3DC00520DF6 /* struct_pile.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = struct_pile.c; path = ../struct_pile.c; sourceTree = "<group>"; };
+		4819CD352184A3DC00520DF6 /* int_tab.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = int_tab.h; path = ../int_tab.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		4819CD2A2184A34B00520DF6 = {
 			isa = PBXGroup;
 			children = (
+				4819CD322184A3DC00520DF6 /* int_tab.c */,
+				4819CD352184A3DC00520DF6 /* int_tab.h */,
+				4819CD332184A3DC00520DF6 /* main.c */,
+				4819CD342184A3DC00520DF6 /* struct_pile.c */,
+				4819CD312184A3DC00520DF6 /* struct_pile.h */,
 			);
 			sourceTree = "<group>";
 		};

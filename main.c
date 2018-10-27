@@ -13,6 +13,5 @@ int main(int argc, char const *argv[])
 	push(&p,3);
 
 	printf("tete de pile %d",tete_pile(&p));
-
-
+    printf("Essaie git hub");
 }
