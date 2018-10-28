@@ -18,11 +18,13 @@ void push(pile *p,int donnee){
 }
 
 int pop(pile *p){
-	int result = (*p)->donnee;
-	pile next=(*p)->prochain;
-	free(*p);
-	*p=next;
-	return result;
+    if (!est_pile_vide(*p)) {
+        int result = (*p)->donnee;
+        pile next=(*p)->prochain;
+        free(*p);
+        *p=next;
+        return result;
+    } else printf("la pile est vide ERREUR"); exit(0);
 }
 
 void destroy (pile p){
@@ -45,7 +47,10 @@ void rec_destroy (pile p){
 }
 
 int tete_pile(pile *p){
-	return (*p)->donnee;
+    if (!est_pile_vide(*p)) {
+        return (*p)->donnee;
+        }
+    else printf("La pile est vide ERREUR\n"); exit(0);
 }
 
 
