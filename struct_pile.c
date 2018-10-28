@@ -13,6 +13,7 @@ void push(pile *p,int donnee){
 	if (new==NULL){exit(1);}
 	new->donnee=donnee;
 	new->prochain=*p;
+    printf("valeur ajouté %d\n",donnee);
 	*p=new;
 }
 
