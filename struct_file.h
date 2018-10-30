@@ -44,4 +44,10 @@ int tete_file(file *);
 */
 int queue_file(file *);
 
+/*
+ input: une file
+ output: le nombre d'élément dans une file
+ */
+int nb_element_file(file*);
+
 #endif

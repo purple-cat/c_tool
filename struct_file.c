@@ -31,10 +31,11 @@ void enfiler(file *f,int donnee){
 int tete_file(file *f){
     if (!est_file_vide(*f)){
         int donnee = (*f)->donnee;
-        printf("Valeur en tete de file : %d \n",donnee);
+        //printf("Valeur en tete de file : %d \n",donnee);
         return donnee;
     }else {
-        printf("La file est vide"); exit(0);
+        //printf("La file est vide");
+        exit(0);
     }
 }
 
@@ -45,10 +46,19 @@ int queue_file(file *f){
             temp=temp->suivant;
         }
         int donnee=temp->donnee;
-        printf("Queue de la file : %d \n",donnee);
+        //printf("Queue de la file : %d \n",donnee);
         return donnee;
     } else {
         printf("La vide est vide: ERREUR \n"); exit(0);
     }
     
+}
+
+int nb_element_file(file *f){
+    int count = 0;
+    file temp = *f;
+    while (temp != NULL ){
+        temp=temp->suivant; count ++;
+    }
+    return count;
 }
