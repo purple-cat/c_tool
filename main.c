@@ -8,13 +8,12 @@
 int main(int argc, char const *argv[])
 {
 	printf("début des tests\n");
-	pile p=pile_vide();
+    file ma_file = file_vide();
+    enfiler(&ma_file,1);
+    enfiler(&ma_file,2);
+    enfiler(&ma_file,3);
+    enfiler(&ma_file,4);
+    tete_file(&ma_file);
     
-	push(&p,1);
-	push(&p,2);
-	push(&p,3);
-    push(&p,54);
-
-
-	
+    
 }
