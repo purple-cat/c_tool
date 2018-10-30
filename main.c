@@ -14,6 +14,7 @@ int main(int argc, char const *argv[])
     enfiler(&ma_file,3);
     enfiler(&ma_file,4);
     tete_file(&ma_file);
+    queue_file(&ma_file);
     
     
 }

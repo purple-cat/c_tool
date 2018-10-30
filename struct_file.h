@@ -38,4 +38,10 @@ void enfiler(file *,int);
  */
 int tete_file(file *);
 
+/*
+ input: une file
+ output: le denière élément de la file.
+*/
+int queue_file(file *);
+
 #endif

@@ -37,3 +37,18 @@ int tete_file(file *f){
         printf("La file est vide"); exit(0);
     }
 }
+
+int queue_file(file *f){
+    if (!est_file_vide(*f)) {
+        file temp=*f;
+        while (temp->suivant!=NULL) {
+            temp=temp->suivant;
+        }
+        int donnee=temp->donnee;
+        printf("Queue de la file : %d \n",donnee);
+        return donnee;
+    } else {
+        printf("La vide est vide: ERREUR \n"); exit(0);
+    }
+    
+}
