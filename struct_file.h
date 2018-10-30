@@ -50,4 +50,13 @@ int queue_file(file *);
  */
 int nb_element_file(file*);
 
+
+/*
+ input: une file
+ output: le nombre d'élément dans une file
+ */
+void print_me(file*);
+
+
+
 #endif

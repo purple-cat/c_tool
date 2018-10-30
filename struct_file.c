@@ -62,3 +62,11 @@ int nb_element_file(file *f){
     }
     return count;
 }
+
+void print_me(file *f){
+    file temp = *f;
+    while (temp->suivant != NULL) {
+        printf("Element :%d \n",temp->donnee);
+        temp=temp->suivant;
+    }
+}
